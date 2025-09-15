@@ -23,7 +23,7 @@ Please review the following documents in chronological order to fully understand
 
 Start here to understand the hackathon concept, pathways, rules of engagement, and participation requirements. This document sets the foundation for everything that follows.
 
-### 02. [Prompting Masterclass](02_prompting-masterclass.md)
+### 02. [Prompting Masterclass](02_prompting-milestones.md)
 
 A comprehensive guide to mastering AI prompting techniques using iterative refinement methodologies.
 
