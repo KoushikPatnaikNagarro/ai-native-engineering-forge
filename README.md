@@ -4,32 +4,40 @@ Welcome to the AI-Native Engineering Forge hackathon! This README provides a com
 
 This hackathon is designed to explore what it means to build software end-to-end with AI as your primary collaborator, not just your assistant. We're challenging teams to fundamentally rewire how they think about building software — starting with AI capabilities and human creativity as equal partners from day one.
 
+## Getting Started
+
+- Read documentation in order as described in *Documentation Overview*
+- Clone the repository
+- Create a new branch with your team name
+- Implement the task, [as described here](05_todo-app-requirements.md)
+- Submit a pull request against the main branch
+- Note
+  - For every task you must/should have a "final" dedicted prompt
+  - You must maintain all your "final" prompts inside a `prompts` folder
+
 ## Documentation Overview
 
 Please review the following documents in chronological order to fully understand the hackathon structure, requirements, and expectations:
 
-### 01. [AI-Native Hackathon Rules](ai-native-hackathon-rules.md)
+### 01. [AI-Native Hackathon Rules](01_hackathon-rules.md)
+
 Start here to understand the hackathon concept, pathways, rules of engagement, and participation requirements. This document sets the foundation for everything that follows.
 
-### 02. [Hackathon Timeline](hackathon-timeline.md)
-Review the complete week-long schedule from Monday kickoff to Friday presentations. Includes participation requirements and important deadlines.
+### 02. [Prompting Masterclass](02_prompting-masterclass.md)
 
-### 03. [Success Evaluation Framework](success-evaluation-framework.md)
-Understand how your work will be evaluated, including key artifacts to create and criteria for measuring AI-native innovation.
-
-### 04. [To-Do App Requirements](todo-app-requirements.md)
-Task 1 requirements - Build a frictionless, no-login to-do application using AI-first methodologies.
-
-### Bonus: [Prompting Masterclass](prompting-masterclass.md)
 A comprehensive guide to mastering AI prompting techniques using iterative refinement methodologies.
 
-## Getting Started
+### 03. [Success Evaluation Framework](03_success-evaluation-framework.md)
 
-1. **Start with document 01** - Read the AI-Native Hackathon Rules to understand the concept and choose your pathway
-2. **Review the timeline** (document 02) to understand the week's structure and deadlines
-3. **Study the evaluation criteria** (document 03) to know how success will be measured
-4. **Examine the task requirements** (documents 04) to understand what you'll be building
-5. **Highly Recommended:** Review the Prompting Masterclass for AI interaction techniques
+Understand how your work will be evaluated, including key artifacts to create and criteria for measuring AI-native innovation.
+
+### 04. [Hackathon Timeline](04_hackathon-timeline.md)
+
+Review the complete week-long schedule from Monday kickoff to Friday presentations. Includes participation requirements and important deadlines.
+
+### 05. [To-Do App Requirements](05_todo-app-requirements.md)
+
+Task 1 requirements - Build a frictionless, no-login to-do application using AI-first methodologies.
 
 ## Questions?
 

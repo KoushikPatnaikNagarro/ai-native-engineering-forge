@@ -4,6 +4,7 @@
 
 Provide a frictionless, no-login to-do app that allows users to quickly note tasks and manage them with minimal effort. The emphasis is on simplicity, clarity, and speed, giving users an easy way to jot reminders and track their state.
 
+
 ## 2. Persona / User Role
 
 **Note Taker**
@@ -33,7 +34,10 @@ Anyone who needs to capture reminders or quick tasks without overhead.
 - Tasks are short-term, lightweight reminders.
 - Minimal features = less cognitive load and faster adoption.
 
-## 5. Success Criteria
+## 5. Targeted User Experience
+The user experience should mimic https://todomvc.com/examples/react/dist/
+
+## 6. Success Criteria
 
 - **Ease of Addition:** Task can be added in seconds with zero setup.
 - **Update Flow:** Bulk completion and reopening are intuitive and quick.
