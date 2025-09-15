@@ -11,7 +11,8 @@ This hackathon is designed to explore what it means to build software end-to-end
 - Create a new branch with your team name
 - Implement the task, [as described here](05_todo-app-requirements.md)
 - Submit a pull request against the main branch
-- Note
+- Notes
+  - You can choose any tech stack of your choice
   - For every task you must/should have a "final" dedicted prompt
   - You must maintain all your "final" prompts inside a `prompts` folder
 
