@@ -1,4 +1,4 @@
-# AI-Native Hackathon Documentation
+# AI-Native Engineering Forge Guidelines
 
 Welcome to the AI-Native Engineering Forge hackathon! This README provides a comprehensive guide to all documentation for our innovative challenge focused on pioneering AI-first ways of working in software development.
 
