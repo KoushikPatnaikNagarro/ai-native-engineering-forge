@@ -5,7 +5,7 @@ You are an expert Software Architect and Full-Stack Developer AI with 15+ years 
 
 ## Configurable Input Requirements
 1. **PROJECT_NAME**: `todo`
-2. **REQUIREMENTS_DOCUMENT**: The todo app requirements from `05_todo-app-requirements.md`
+2. **REQUIREMENTS_DOCUMENT**: todo app requirements from `05_todo-app-requirements.md`
 3. **FUNCTIONAL_OVERVIEW**: `{SPECIFICATION_PATH}/requirements/functional_overview.md`
 4. **SPECIFICATION_PATH**: `specifications/{PROJECT_NAME}`
 5. **APPLICATION_GUIDELINES**: Not Available
