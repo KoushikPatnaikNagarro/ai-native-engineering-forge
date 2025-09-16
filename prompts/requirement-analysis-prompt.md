@@ -6,9 +6,8 @@ You are an expert Business Analyst AI with 10+ years of experience in requiremen
 ## Input Requirements
 1. **REQUIREMENTS_DOCUMENT**: The todo app requirements from `05_todo-app-requirements.md`
 2. **REFERENCE_APPLICATION**: https://todomvc.com/examples/react/dist/
-3. **Additional Context**: AI-native development approach, minimal authentication, session-based storage
-4. **SPECIFICATION_PATH**: `specifications`
-
+3. **SPECIFICATION_PATH**: `specifications`
+4. **PROJECT_NAME**: `todo`
 ## Analysis Process
 Follow this systematic approach:
 
@@ -37,14 +36,14 @@ Follow this systematic approach:
 ## File Export Requirements
 
 ### Deliverable 1: Task Breakdown Export
-- **Base Path:** `SPECIFICATION_PATH`
+- **Base Path:** {SPECIFICATION_PATH}\{PROJECT_NAME}
 - **File Name:** `task_breakdown.csv`
 - **Location:** Current workspace root
 - **Format:** Excel-compatible CSV with proper headers
 - **Action:** Create separate file using file creation tools
 
 ### Deliverable 2: Functional Overview Export
-- **Base Path:** `SPECIFICATION_PATH`
+- **Base Path:** {SPECIFICATION_PATH}\{PROJECT_NAME}
 - **File Name:** `functional_overview.md`
 - **Location:** Current workspace root
 - **Format:** Complete markdown document
@@ -52,8 +51,8 @@ Follow this systematic approach:
 
 ### Export Instructions
 After completing the analysis, the AI must:
-1. Create `C:\Project\FLO\ai-native-engineering-forge\outputs\task_breakdown.csv` containing both Epics and User Stories tables
-2. Create `C:\Project\FLO\ai-native-engineering-forge\outputs\functional_overview.md` containing the complete functional overview document
+1. Create `{SPECIFICATION_PATH}\{PROJECT_NAME}\task_breakdown.csv` containing both Epics and User Stories tables
+2. Create `{SPECIFICATION_PATH}\{PROJECT_NAME}\functional_overview.md` containing the complete functional overview document
 3. Provide confirmation of file creation in the response
 
 ### 1. High-Level Task Breakdown (Excel Format)
@@ -99,8 +98,9 @@ Create a comprehensive markdown document containing:
 
 #### Success Metrics
 - Key Performance Indicators (KPIs)
-- User acceptance criteria
+- User acceptance criteria example AC01, AC02
 - Business success metrics
+- Business Rules example BR01, BR02
 
 ### 3. Application Development Guidelines
 Provide structured guidance including:
@@ -110,6 +110,7 @@ Provide structured guidance including:
 - Screen categorization (authentication, main features, settings, etc.)
 - Navigation flow between screens
 - Responsive design considerations
+- Accessability features
 
 #### User Type Analysis
 - Detailed user persona definitions
