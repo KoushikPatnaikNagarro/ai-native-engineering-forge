@@ -21,6 +21,7 @@ Anyone who needs to capture reminders or quick tasks without overhead.
 - **Reopen:** Removing "mark as complete" reverts a task to Open.
 - **Filter:** Simple view toggle between All, Open, and Completed.
 - **Sorting:** Tasks/cards appear in the order they were added (chronological).
+- **Clear Completed Tasks:** User can clear all completed tasks and they should no longer appear on UI. 
 
 ## 4. Constraints and Assumptions
 
@@ -40,7 +41,7 @@ The user experience should mimic https://todomvc.com/examples/react/dist/
 ## 6. Success Criteria
 
 - **Ease of Addition:** Task can be added in seconds with zero setup.
-- **Update Flow:** Bulk completion and reopening are intuitive and quick.
+- **Update Flow:** Bulk completion and reopening are intuitive and quick. 
 - **Clarity:** Users can filter to see exactly what they need (All, Open, Completed).
 - **Reliability:** Task list always reflects user's last actions, sorted by time of addition.
 

@@ -1,0 +1,152 @@
+Epic ID,Epic Name,Description,Priority,Estimated Effort,Dependencies
+E001,Core Task Management,Basic todo creation and management functionality,Critical,21,"None"
+E002,Task Status Management,Task completion and state management features,Critical,13,"E001"
+E003,Filtering and Display,Task filtering and view management capabilities,High,8,"E001,E002"
+E004,Bulk Operations,Multiple task selection and bulk operations,Medium,8,"E002"
+E005,User Interface,Clean and intuitive user interface implementation,High,13,"E001"
+
+Story ID,Epic ID,Subject,Description,Acceptance Criteria,Definition of Done,Priority,Effort Points,Assignee,Status
+US001,E001,Add New Task,"As a Note Taker, I want to quickly add a new task through a simple text input so that I can capture reminders instantly","1. Text input field is prominently displayed
+2. User can type task description and press Enter to add
+3. Task is immediately added to the list
+4. Input field is cleared after adding
+5. New task appears at the bottom of the list (chronological order)","1. Feature developed and unit tested
+2. UI components implemented with proper styling
+3. Integration tests passing
+4. Code reviewed and merged
+5. Feature deployed and verified",Critical,3,TBD,Not Started
+US002,E001,Display Task List,"As a Note Taker, I want to see all my tasks in a clear list format so that I can view what I need to do","1. Tasks are displayed in a clean list format
+2. Each task shows its description clearly
+3. Tasks appear in chronological order (newest at bottom)
+4. List is scrollable if there are many tasks
+5. Empty state message when no tasks exist","1. Feature developed and unit tested
+2. UI components implemented with responsive design
+3. Accessibility standards met
+4. Code reviewed and merged
+5. Feature deployed and verified",Critical,2,TBD,Not Started
+US003,E001,Task Persistence,"As a Note Taker, I want my tasks to persist during my session so that I don't lose my work while using the app","1. Tasks remain visible after adding
+2. Tasks persist during browser session
+3. Session storage is used for temporary persistence
+4. Clear indication that data is session-based
+5. No data lost during normal app usage","1. Session storage implementation complete
+2. Data persistence logic tested
+3. Error handling for storage failures
+4. Performance impact assessed
+5. Feature deployed and verified",High,5,TBD,Not Started
+US004,E002,Mark Task Complete,"As a Note Taker, I want to mark individual tasks as complete so that I can track my progress","1. Each task has a clear completion toggle (checkbox)
+2. Clicking toggle marks task as complete
+3. Completed tasks have visual distinction (strikethrough, different color)
+4. Task state persists during session
+5. Toggle is accessible and intuitive","1. Feature developed with proper state management
+2. Visual feedback implemented
+3. Accessibility compliance verified
+4. Unit and integration tests passing
+5. Code reviewed and deployed",Critical,3,TBD,Not Started
+US005,E002,Reopen Completed Task,"As a Note Taker, I want to reopen completed tasks so that I can correct mistakes or handle recurring items","1. Completed tasks can be clicked to reopen
+2. Task returns to open state immediately
+3. Visual styling reverts to open task appearance
+4. Task remains in its original position
+5. State change persists during session","1. Toggle functionality implemented bidirectionally
+2. State management handles all transitions
+3. UI feedback is immediate and clear
+4. Edge cases tested and handled
+5. Feature verified in production",High,2,TBD,Not Started
+US006,E002,Task Status Indicators,"As a Note Taker, I want clear visual indicators for task status so that I can quickly identify what's done and what's pending","1. Open tasks have clear, normal text styling
+2. Completed tasks have strikethrough text
+3. Checkboxes show checked/unchecked states clearly
+4. Color coding or icons differentiate states
+5. Status is immediately apparent at a glance","1. CSS styling implemented for all states
+2. Visual design meets accessibility standards
+3. Cross-browser compatibility verified
+4. Design review approved
+5. Feature deployed and tested",Medium,3,TBD,Not Started
+US007,E003,Filter All Tasks,"As a Note Taker, I want to view all my tasks regardless of status so that I can see the complete picture","1. 'All' filter button is available and prominent
+2. Clicking 'All' shows both open and completed tasks
+3. Default view shows all tasks
+4. Active filter is visually indicated
+5. Task count reflects total number of tasks","1. Filter functionality implemented
+2. UI controls are intuitive and accessible
+3. Filter state management working correctly
+4. Performance optimization for large lists
+5. Feature tested and deployed",High,2,TBD,Not Started
+US008,E003,Filter Open Tasks,"As a Note Taker, I want to view only open tasks so that I can focus on what needs to be done","1. 'Open' filter button is available
+2. Clicking 'Open' shows only incomplete tasks
+3. Completed tasks are hidden from view
+4. Task count shows number of open tasks
+5. Filter state persists during session","1. Filter logic correctly identifies open tasks
+2. UI updates instantly when filter applied
+3. Count calculations are accurate
+4. Session persistence implemented
+5. Feature verified in all browsers",High,2,TBD,Not Started
+US009,E003,Filter Completed Tasks,"As a Note Taker, I want to view only completed tasks so that I can review what I've accomplished","1. 'Completed' filter button is available
+2. Clicking 'Completed' shows only finished tasks
+3. Open tasks are hidden from view
+4. Task count shows number of completed tasks
+5. Filter provides sense of accomplishment","1. Filter correctly identifies completed tasks
+2. UI provides clear feedback on filter state
+3. Empty state handled when no completed tasks
+4. Performance optimized for filtering
+5. Feature deployed and verified",Medium,2,TBD,Not Started
+US010,E003,Task Counter Display,"As a Note Taker, I want to see how many tasks I have in each category so that I can understand my workload","1. Counter shows total number of tasks
+2. Counter updates based on active filter
+3. Counter shows correct count for All/Open/Completed
+4. Counter updates immediately when tasks change
+5. Counter is prominently displayed","1. Counter logic implemented and tested
+2. Real-time updates working correctly
+3. Accurate calculations for all filter states
+4. UI positioning and styling complete
+5. Feature verified across all scenarios",Medium,3,TBD,Not Started
+US011,E004,Select Multiple Tasks,"As a Note Taker, I want to select multiple open tasks so that I can perform bulk operations efficiently","1. Checkbox or selection mechanism for multiple tasks
+2. Visual indication of selected tasks
+3. Only open tasks can be bulk selected
+4. Select all option available for open tasks
+5. Selection state is clear and intuitive","1. Multi-selection UI implemented
+2. State management for selections working
+3. Visual feedback for selected items
+4. Keyboard navigation support added
+5. Feature tested with various selections",Medium,5,TBD,Not Started
+US012,E004,Bulk Mark Complete,"As a Note Taker, I want to mark multiple tasks as complete at once so that I can quickly update my progress","1. Bulk complete action available when tasks selected
+2. All selected tasks marked complete simultaneously
+3. Bulk action is confirmed before execution
+4. Selection is cleared after bulk operation
+5. Operation is undoable or clearly communicated","1. Bulk operation logic implemented
+2. Confirmation dialog or clear action button
+3. Performance optimized for multiple updates
+4. Error handling for partial failures
+5. Feature thoroughly tested and deployed",Medium,3,TBD,Not Started
+US013,E004,Clear Completed Tasks,"As a Note Taker, I want to remove all completed tasks so that I can clean up my list and focus on current work","1. 'Clear Completed' action is available
+2. Action removes all completed tasks permanently
+3. Confirmation dialog prevents accidental deletion
+4. Action is only available when completed tasks exist
+5. List updates immediately after clearing","1. Clear functionality implemented safely
+2. Confirmation mechanism prevents data loss
+3. UI state updates correctly after clearing
+4. Action availability logic working
+5. Feature verified with edge cases",Medium,3,TBD,Not Started
+US014,E005,Responsive Design,"As a Note Taker, I want the app to work well on different screen sizes so that I can use it on any device","1. App layout adapts to mobile screens
+2. Touch targets are appropriately sized
+3. Text remains readable on small screens
+4. All functionality works on mobile devices
+5. App loads quickly on mobile networks","1. Responsive CSS implemented
+2. Mobile testing completed across devices
+3. Touch interaction optimized
+4. Performance benchmarks met
+5. Cross-device compatibility verified",High,8,TBD,Not Started
+US015,E005,Accessibility Support,"As a Note Taker with disabilities, I want the app to be accessible so that I can use it effectively with assistive technologies","1. All interactive elements have proper ARIA labels
+2. Keyboard navigation works throughout the app
+3. Screen reader compatibility verified
+4. Color contrast meets WCAG standards
+5. Focus indicators are clearly visible","1. ARIA implementation complete
+2. Keyboard navigation thoroughly tested
+3. Screen reader testing completed
+4. Accessibility audit passed
+5. WCAG compliance verified",High,5,TBD,Not Started
+US016,E005,Clean User Interface,"As a Note Taker, I want a clean and distraction-free interface so that I can focus on my tasks without cognitive overhead","1. Minimalist design with essential elements only
+2. Clean typography and appropriate spacing
+3. Intuitive layout following design principles
+4. No unnecessary visual clutter
+5. Consistent design language throughout","1. Design system implemented
+2. UI components follow style guide
+3. Design review and approval completed
+4. Cross-browser visual consistency verified
+5. User feedback incorporated and deployed",High,8,TBD,Not Started
