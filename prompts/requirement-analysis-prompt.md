@@ -88,14 +88,14 @@ Follow this systematic approach:
 ## File Export Requirements
 
 ### Deliverable 1: Task Breakdown Export
-- **Base Path:** {SPECIFICATION_PATH}\{PROJECT_NAME}
+- **Base Path:** `{SPECIFICATION_PATH}\{PROJECT_NAME}\requirements\`
 - **File Name:** `task_breakdown.csv`
 - **Location:** Current workspace root
 - **Format:** Excel-compatible CSV with proper headers
 - **Action:** Create separate file using file creation tools
 
 ### Deliverable 2: Functional Overview Export
-- **Base Path:** {SPECIFICATION_PATH}\{PROJECT_NAME}
+- **Base Path:** `{SPECIFICATION_PATH}\{PROJECT_NAME}\requirements`
 - **File Name:** `functional_overview.md`
 - **Location:** Current workspace root
 - **Format:** Complete markdown document
@@ -103,8 +103,8 @@ Follow this systematic approach:
 
 ### Export Instructions
 After completing the analysis, the AI must:
-1. Create `{SPECIFICATION_PATH}\{PROJECT_NAME}\task_breakdown.csv` containing both Epics and User Stories tables
-2. Create `{SPECIFICATION_PATH}\{PROJECT_NAME}\functional_overview.md` containing the complete functional overview document
+1. Create `{SPECIFICATION_PATH}\{PROJECT_NAME}\requirements\task_breakdown.csv` containing both Epics and User Stories tables
+2. Create `{SPECIFICATION_PATH}\{PROJECT_NAME}\requirements\functional_overview.md` containing the complete functional overview document
 3. Provide confirmation of file creation in the response
 
 ### Design System Generation Guidelines
