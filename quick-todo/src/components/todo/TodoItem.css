@@ -1,0 +1,438 @@
+/* TodoItem Component Styles - Design System Implementation */
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-3) var(--spacing-4);
+  border: 1px solid var(--color-surface-elevated-2);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-base);
+  margin-bottom: var(--spacing-2);
+  transition: all var(--transition-normal);
+  min-height: 56px;
+  position: relative;
+}
+
+.todo-item__content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: var(--spacing-3);
+}
+
+.todo-item__checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.todo-item__checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-surface-elevated-2);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-base);
+  cursor: pointer;
+  position: relative;
+  transition: all var(--transition-normal);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-item__checkbox-custom {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-surface-elevated-2);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-base);
+  transition: all var(--transition-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-item__checkbox:checked + .todo-item__checkbox-custom {
+  background-color: var(--color-success-main);
+  border-color: var(--color-success-main);
+  animation: checkboxBounce var(--duration-normal) ease;
+}
+
+.todo-item__checkbox:checked + .todo-item__checkbox-custom::after {
+  content: '✓';
+  color: var(--color-surface-base);
+  font-size: 12px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+}
+
+.todo-item__main {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: var(--spacing-3);
+  min-width: 0; /* Allow text to shrink */
+}
+
+.todo-item:hover {
+  border-color: var(--color-interactive-default);
+  background-color: var(--color-surface-elevated);
+  box-shadow: var(--shadow-base);
+}
+
+.todo-item--completed {
+  background-color: var(--color-success-light);
+  border-color: var(--color-success-main);
+}
+
+.todo-item--editing {
+  border-color: var(--color-interactive-focus);
+  background-color: var(--color-surface-base);
+  box-shadow: var(--shadow-focus);
+}
+
+.todo-item--entering {
+  animation: slideInFromTop var(--duration-slow) ease-out;
+}
+
+.todo-item--exiting {
+  animation: slideOutToRight var(--duration-slow) ease-in forwards;
+}
+
+.todo-item__checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-surface-elevated-2);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-base);
+  cursor: pointer;
+  position: relative;
+  transition: all var(--transition-normal);
+  margin-right: var(--spacing-3);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-item__checkbox:hover {
+  border-color: var(--color-interactive-default);
+}
+
+.todo-item__checkbox:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(32, 84, 99, 0.3);
+}
+
+.todo-item__checkbox--checked {
+  background-color: var(--color-success-main);
+  border-color: var(--color-success-main);
+  animation: checkboxBounce var(--duration-normal) ease;
+}
+
+.todo-item__checkbox-icon {
+  display: none;
+  color: var(--color-surface-base);
+  font-size: 12px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+}
+
+.todo-item__checkbox--checked .todo-item__checkbox-icon {
+  display: block;
+}
+
+.todo-item__checkbox-icon::before {
+  content: '✓';
+}
+
+.todo-item__text {
+  flex: 1;
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-primary);
+  word-break: break-word;
+  hyphens: auto;
+  cursor: text;
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-normal);
+  min-width: 0; /* Allow text to shrink */
+}
+
+.todo-item__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  flex-shrink: 0;
+  font-size: var(--font-size-caption);
+  color: var(--color-text-secondary);
+}
+
+.todo-item__priority {
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.todo-item__priority--high {
+  background-color: var(--color-error-light);
+  color: var(--color-error-main);
+}
+
+.todo-item__priority--medium {
+  background-color: var(--color-warning-light);
+  color: var(--color-warning-main);
+}
+
+.todo-item__priority--low {
+  background-color: var(--color-info-light);
+  color: var(--color-info-main);
+}
+
+.todo-item__category {
+  background-color: var(--color-surface-elevated);
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-caption);
+  color: var(--color-text-secondary);
+}
+
+.todo-item__time {
+  font-size: var(--font-size-caption);
+  color: var(--color-text-disabled);
+  white-space: nowrap;
+}
+
+.todo-item__text--completed {
+  text-decoration: line-through;
+  color: var(--color-text-secondary);
+}
+
+.todo-item__text--editing {
+  border: 2px solid var(--color-interactive-focus);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-1) var(--spacing-2);
+  background-color: var(--color-surface-base);
+  margin: -6px -8px -6px 0;
+}
+
+/* Edit Mode Styles */
+.todo-item__edit-input {
+  width: 100%;
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 2px solid var(--color-interactive-focus);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-base);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  font-family: inherit;
+  resize: none;
+  transition: all var(--transition-normal);
+  margin-bottom: var(--spacing-3);
+}
+
+.todo-item__edit-input:focus {
+  outline: none;
+  border-color: var(--color-interactive-focus);
+  box-shadow: var(--shadow-focus);
+}
+
+.todo-item__edit-meta {
+  display: flex;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-3);
+  flex-wrap: wrap;
+}
+
+.todo-item__priority-select {
+  padding: var(--spacing-1) var(--spacing-2);
+  border: 1px solid var(--color-surface-elevated-2);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-base);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-caption);
+  font-family: inherit;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  min-width: 120px;
+}
+
+.todo-item__priority-select:hover {
+  border-color: var(--color-interactive-default);
+}
+
+.todo-item__priority-select:focus {
+  outline: none;
+  border-color: var(--color-interactive-focus);
+  box-shadow: 0 0 0 2px rgba(32, 84, 99, 0.1);
+}
+
+.todo-item__category-input {
+  flex: 1;
+  min-width: 150px;
+}
+
+.todo-item__edit-actions {
+  display: flex;
+  gap: var(--spacing-2);
+  justify-content: flex-end;
+}
+
+.todo-item__delete {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  color: var(--color-text-disabled);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-normal);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.todo-item__delete:hover {
+  background-color: var(--color-error-main);
+  color: var(--color-surface-base);
+}
+
+.todo-item__delete:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(248, 113, 113, 0.3);
+}
+
+.todo-item__actions {
+  display: flex;
+  gap: var(--spacing-1);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.todo-item:hover .todo-item__actions {
+  opacity: 1;
+}
+
+/* Mobile Adaptations */
+@media (max-width: 767px) {
+  .todo-item {
+    min-height: 64px;
+    padding: var(--spacing-4);
+  }
+  
+  .todo-item__checkbox {
+    width: 24px;
+    height: 24px;
+    margin-right: var(--spacing-4);
+  }
+  
+  .todo-item__delete {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .todo-item__actions {
+    opacity: 1; /* Always visible on mobile */
+  }
+  
+  /* Edit mode mobile adaptations */
+  .todo-item__edit-meta {
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+  
+  .todo-item__priority-select {
+    width: 100%;
+    min-width: unset;
+  }
+  
+  .todo-item__category-input {
+    min-width: unset;
+  }
+  
+  .todo-item__edit-actions {
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+  
+  .todo-item__edit-actions .button {
+    width: 100%;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .todo-item__checkbox {
+    min-width: var(--touch-target-comfortable);
+    min-height: var(--touch-target-comfortable);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .todo-item__actions {
+    opacity: 1;
+  }
+  
+  .todo-item__text {
+    min-height: var(--touch-target-min);
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Remove hover effects */
+  .todo-item:hover {
+    border-color: var(--color-surface-elevated-2);
+    box-shadow: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .todo-item {
+    border-width: 2px;
+  }
+  
+  .todo-item__checkbox {
+    border-width: 3px;
+  }
+  
+  .todo-item__priority-select {
+    border-width: 2px;
+  }
+  
+  .todo-item__edit-input {
+    border-width: 3px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .todo-item,
+  .todo-item__checkbox,
+  .todo-item__text,
+  .todo-item__delete,
+  .todo-item__actions,
+  .todo-item__priority-select,
+  .todo-item__edit-input {
+    transition: none;
+  }
+  
+  .todo-item--entering,
+  .todo-item--exiting,
+  .todo-item__checkbox--checked {
+    animation: none;
+  }
+}

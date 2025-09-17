@@ -1,0 +1,269 @@
+/* Main Application Styles for US03 and US14 Implementation */
+
+.app {
+  min-height: 100vh;
+  background-color: var(--color-surface-base);
+  font-family: var(--font-family-primary);
+}
+
+.app__container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--spacing-6) var(--spacing-4);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Error Banner Styles - US13 and US14 */
+.error-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-3) var(--spacing-4);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-4);
+  border: 1px solid;
+  font-size: var(--font-size-body-sm);
+  line-height: var(--line-height-body-sm);
+  animation: slideIn 0.3s ease-out;
+}
+
+.error-banner__content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  flex: 1;
+}
+
+.error-banner__icon {
+  font-size: var(--font-size-body-md);
+  flex-shrink: 0;
+}
+
+.error-banner__message {
+  font-weight: var(--font-weight-medium);
+}
+
+.error-banner__dismiss {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: var(--spacing-1);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-body-md);
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity var(--transition-fast);
+  margin-left: var(--spacing-2);
+}
+
+.error-banner__dismiss:hover {
+  opacity: 1;
+}
+
+.error-banner--error {
+  background-color: var(--color-destructive-surface);
+  border-color: var(--color-destructive-border);
+  color: var(--color-destructive-text);
+}
+
+.error-banner--warning {
+  background-color: var(--color-warning-surface);
+  border-color: var(--color-warning-border);
+  color: var(--color-warning-text);
+}
+
+.error-banner--info {
+  background-color: var(--color-info-surface);
+  border-color: var(--color-info-border);
+  color: var(--color-info-text);
+}
+
+/* Loading States - US14 */
+.todo-list--loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+/* Animations for feedback components */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header Styles */
+.app__header {
+  text-align: center;
+  margin-bottom: var(--spacing-8);
+  padding-bottom: var(--spacing-6);
+  border-bottom: 1px solid var(--color-surface-elevated-2);
+}
+
+.app__title {
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-3);
+  line-height: var(--line-height-h6);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.app__subtitle {
+  font-size: var(--font-size-body-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-body-sm);
+  letter-spacing: var(--letter-spacing-normal);
+  font-weight: var(--font-weight-regular);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Main Content */
+.app__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.app__list-section {
+  flex: 1;
+  /* Styling handled by TodoList component */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app__container {
+    padding: var(--spacing-4) var(--spacing-3);
+    max-width: 100%;
+  }
+  
+  .app__header {
+    margin-bottom: var(--spacing-6);
+    padding-bottom: var(--spacing-4);
+  }
+  
+  .app__title {
+    font-size: var(--font-size-h6);
+    line-height: var(--line-height-h6);
+    letter-spacing: var(--letter-spacing-normal);
+  }
+  
+  .app__main {
+    gap: var(--spacing-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .app__container {
+    padding: var(--spacing-3) var(--spacing-2);
+  }
+  
+  .app__header {
+    margin-bottom: var(--spacing-4);
+  }
+  
+  .app__subtitle {
+    font-size: var(--font-size-button);
+  }
+  
+  .app__main {
+    gap: var(--spacing-3);
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .app__container {
+    max-width: 768px;
+    padding: var(--spacing-6) var(--spacing-5);
+  }
+}
+
+/* Desktop optimizations */
+@media (min-width: 1025px) {
+  .app__container {
+    max-width: 600px;
+    padding: var(--spacing-8) var(--spacing-6);
+  }
+  
+  .app__header {
+    margin-bottom: var(--spacing-10);
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .app__main {
+    /* Increase spacing for touch targets */
+    gap: var(--spacing-5);
+  }
+}
+
+/* Landscape mobile optimization */
+@media (max-width: 768px) and (orientation: landscape) {
+  .app__container {
+    padding: var(--spacing-3) var(--spacing-4);
+  }
+  
+  .app__header {
+    margin-bottom: var(--spacing-4);
+    padding-bottom: var(--spacing-3);
+  }
+  
+  .app__title {
+    font-size: var(--font-size-body);
+    margin-bottom: var(--spacing-2);
+    line-height: var(--line-height-body);
+    letter-spacing: var(--letter-spacing-normal);
+  }
+  
+  .app__subtitle {
+    font-size: var(--font-size-caption);
+    line-height: var(--line-height-caption);
+    letter-spacing: var(--letter-spacing-wider);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .app__header {
+    border-bottom-width: 2px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .app {
+    background: white;
+  }
+  
+  .app__header {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Hide interactive elements in print */
+  .app__add-section,
+  .app__filter-section {
+    display: none;
+  }
+}
