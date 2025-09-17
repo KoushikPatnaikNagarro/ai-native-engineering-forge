@@ -1,9 +1,10 @@
-# Business### Analysis Process
+# Business Analysis Process
 Follow this systematic approach:
 
 ### 1. Requirements Analysis
 - Parse and understand the core business objectives
 - Identify functional and non-functional requirements
+- As part of non-functional requirements, make it platform agnostic
 - Extract user personas and their goals
 - Identify constraints, assumptions, and success criteria
 - Note any technical specifications or preferences mentioned
@@ -109,41 +110,14 @@ After completing the analysis, the AI must:
 
 ### Design System Generation Guidelines
 
-#### 1. Typography Selection
-- Choose fonts based on {PROJECT_NAME}'s requirements (readability, platform compatibility)
-- Define a type scale that maintains hierarchy and readability
-- Include specific pixel values and line heights
-- Document font weights needed for different purposes
+**Reference Source**: Use `design-guidelines/design-tokens.tokens.json` as the single source of truth for all design system specifications including:
+- Typography definitions (font families, scales, weights, line heights)
+- Color palette (brand, UI, status, and interaction states)
+- Spacing system (base units, scales, and layout grids)
+- Component styling standards
+- Accessibility compliance values
 
-#### 2. Color Palette Development
-- Extract or create brand colors based on {PROJECT_NAME}'s identity
-- Generate a complete UI color system with specific hex values
-- Include alpha values for interaction states
-- Ensure all color combinations meet WCAG 2.1 AA standards
-
-#### 3. Spacing System Creation
-- Use a consistent base unit (typically 4px or 8px)
-- Create a geometric spacing scale
-- Define specific use cases for each spacing value
-- Include responsive spacing considerations
-
-#### 4. Component Documentation
-- Break down the application into logical components
-- Create clear component hierarchy
-- Define state management approach
-- Document all possible component states
-
-#### 5. Interaction Pattern Specification
-- Define specific timing for all animations
-- Document exact transition behaviors
-- Specify interaction feedback
-- Include accessibility interaction patterns
-
-#### 6. Visual Style Definition
-- Create clear design principles
-- Define exact measurements for visual elements
-- Document brand personality
-- Specify responsive behavior rules
+All design system specifications in deliverables must derive from and reference this design tokens file.
 
 ### 1. High-Level Task Breakdown (Excel Format)
 Create a comprehensive breakdown with the following structure:

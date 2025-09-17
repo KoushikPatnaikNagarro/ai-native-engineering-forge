@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Design token colors */
+  --color-brand-primary: #0904a3;
+  --color-text-primary: #06041f;
+  --color-text-secondary: rgba(6, 4, 31, 0.8);
+  --color-text-tertiary: rgba(6, 4, 31, 0.7);
+  --color-text-disabled: rgba(6, 4, 31, 0.5);
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f8feff;
+  --color-background-accent: #d1f5ea;
+  --color-grey-main: #bfbfbf;
+  --color-interactive-default: #0904a3;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #dc2626;
+  --color-info: #3b82f6;
+  
+  /* Typography */
+  --font-family-primary: 'Mulish', system-ui, sans-serif;
+  
+  /* Spacing (4px base unit) */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --spacing-2xl: 32px;
+  --spacing-3xl: 48px;
+  --spacing-4xl: 64px;
+  
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  
+  /* Shadows */
+  --shadow-base: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 1px 3px #cfcfcf;
+  --shadow-medium: 0px 2px 4px #cfcfcf, -4px 0px 4px #d9d9d9;
+  --shadow-large: 0px 10px 15px #cfcfcf, 0px 4px 6px #d9d9d9;
+  --shadow-hover: 0px 2px 15px #acacac, 0px -2px 15px #acacac;
+  
+  /* Animation */
+  --animation-fast: 150ms;
+  --animation-standard: 250ms;
+  --animation-slow: 400ms;
+  --animation-easing: cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-primary);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-interactive-default);
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-grey-main);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-tertiary);
+}

@@ -20,8 +20,9 @@ Anyone who needs to capture reminders or quick tasks without overhead.
 - **Bulk Update:** User can mark multiple open tasks as completed at once.
 - **Reopen:** Removing "mark as complete" reverts a task to Open.
 - **Filter:** Simple view toggle between All, Open, and Completed.
-- **Sorting:** Tasks/cards appear in the order they were added (chronological).
+- **Sorting:** Tasks/cards appear in the order they were added (chronological). Closed tasks should go to the bottom of the list.
 - **Clear Completed Tasks:** User can clear all completed tasks and they should no longer appear on UI. 
+- **Edit Tasks:** Users can edit a task by double-clicking on it. Make sure the UI clearly indicates that tasks are editable via double-click.
 
 ## 4. Constraints and Assumptions
 
