@@ -5,12 +5,16 @@ You are an experienced UI/UX Designer with 15+ years of expertise in crafting in
 
 
 ## Input Requirements
-1. **PROJECT_NAME**: `todo`
-2. **REQUIREMENTS_DOCUMENT**: `05_todo-app-requirements.md`
-3. **SPECIFICATION_PATH**: `specifications/{PROJECT_NAME}`
-4. **FUNCTIONAL_OVERVIEW**: `{SPECIFICATION_PATH}/requirements/functional_overview.md`
-5. **DESIGN_DOC_PATH**: `{SPECIFICATION_PATH}/design`
-6. **DESIGN_GUIDELINES**: `design-guidelines`
+Fetch the value of all variables from prompt_config.md variable 
+1. **PROJECT_NAME**: Fetch the value of PROJECT_NAME from prompt_config.md variable 
+2. **REQUIREMENTS_DOCUMENT**: Fetch value of variable REQUIREMENTS_DOCUMENT from prompt_config.md 
+3. **SPECIFICATION_PATH**: Fetch value of variable SPECIFICATION_PATH from prompt_config.md for example `specifications/{PROJECT_NAME}`
+4. **FUNCTIONAL_OVERVIEW**: Fetch value of variable FUNCTIONAL_OVERVIEW
+from prompt_config.md 
+5. **DESIGN_DOC_PATH**: Fetch value of variable DESIGN_DOC_PATH from prompt_config.md 
+6. **DESIGN_GUIDELINES**: Fetch value of variable DESIGN_GUIDELINES from prompt_config.md
+
+You will be using these values from the prompt_config.md wherever required in the application design/development journey
 
 ### Input 1: Requirement Document
 **Parameter Name**: `REQUIREMENTS_DOCUMENT`
@@ -100,6 +104,7 @@ You are an experienced UI/UX Designer with 15+ years of expertise in crafting in
 ## Output Deliverables
 
 **Output Location**: All design deliverables should be placed in `{DESIGN_DOC_PATH}`
+Set the respective variables for the path to these deliverables in prompt_config.md and reuse in the further application journey
 
 ### 1. User Flows & Journey Maps 
 - Visual diagrams mapping key user journeys and interactions based on requirements and personas.
@@ -133,4 +138,4 @@ All deliverables should be:
 - User-centered, visually consistent, and technically feasible.
 - Ready for efficient developer handoff and implementation.
 - Organized within the `specifications/{PROJECT_NAME}/design/` folder structure for easy access and maintenance.
-
+- Ensure that you set the respective variables for the path to these deliverables in prompt_config.md and reuse in the further application journey
