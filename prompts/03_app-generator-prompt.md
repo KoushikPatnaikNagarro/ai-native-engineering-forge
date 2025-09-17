@@ -3,11 +3,15 @@
 ## Overview
 Generate a complete frontend application based on project requirements and design specifications. This prompt will analyze the requirements, design, and create a suitable technology stack along with a working application and test suite.
 
-## Inputs Required
+## Role Definition
 
+You are a **Senior Full-Stack Developer and Software Architect** with comprehensive expertise in modern development and system architecture. You excel at transforming business requirements and design specifications into production-ready, scalable applications using best practices for code quality, performance, accessibility, and maintainability. Your core strengths include technology stack evaluation, component architecture design, comprehensive testing implementation, and creating enterprise-grade solutions that exceed industry standards.
+
+## Inputs Requirements
 1. **PROJECT_NAME**: todo
 2. **REQUIREMENT_SPECS_PATH**: `specifications/{PROJECT_NAME}/requirements`
-3. **STYLE_GUIDE_PATH**: `design-guidelines/design-tokens.tokens.json`
+3. **DESIGN_SPECS_PATH**: `specifications/{PROJECT_NAME}/design`
+4. **STYLE_GUIDE_PATH**: `design-guidelines`
 
 ## Instructions
 
@@ -20,11 +24,21 @@ Generate a complete frontend application based on project requirements and desig
    - Document API requirements and data models
 
 2. **Design Analysis**
+   - Read and analyze all design documents in `DESIGN_SPECS_PATH`:
+     - **User Flows & Journey Maps** (`user-flows-journey-maps.md`): Understand user interactions and navigation patterns
+     - **Wireframes** (`wireframes.md`): Extract layout structure and component placement
+     - **High-Fidelity Mockups** (`high-fidelity-mockups.md`): Implement pixel-perfect visual designs
+     - **Component Library** (`component-library.md`): Reference reusable UI components and their specifications
+     - **Design Specifications** (`design-specifications.md`): Extract detailed spacing, colors, typography, and responsive behavior
+     - **Accessibility Guidelines** (`accessibility-guidelines.md`): Ensure WCAG compliance implementation
+     - **Handoff Documentation** (`handoff-documentation.md`): Follow developer implementation guidelines
    - Read and analyze the style guide from `STYLE_GUIDE_PATH`
    - Extract the design system (colors, typography, spacing, components)
    - Parse design tokens (colors, fonts, spacing, shadows, etc.)
-   - Identify component specifications and design patterns
-   - Note responsive design requirements and breakpoints
+   - Identify component specifications and design patterns from all design documents
+   - Note responsive design requirements and breakpoints from design specifications
+   - Cross-reference wireframes with high-fidelity mockups for accurate implementation
+   - Implement accessibility requirements as specified in accessibility guidelines
 
 3. **Technology Stack Selection**
    Based on the requirements and design complexity, recommend and justify:
@@ -57,10 +71,15 @@ Generate a complete frontend application based on project requirements and desig
    - Implement color palette, typography scale, and spacing system as defined
    - Apply shadows, gradients, and other visual effects from the style guide
 
-2. **Base Components**
-   - Create reusable UI components (Button, Input, Card, etc.)
-   - Implement responsive design patterns
-   - Ensure accessibility compliance (ARIA labels, keyboard navigation)
+2. **Component Implementation**
+   - Reference `component-library.md` from `DESIGN_SPECS_PATH` for component specifications
+   - Create reusable UI components following the component library documentation
+   - Implement component states, variants, and usage patterns as specified
+   - Follow wireframes from `wireframes.md` for structural layout and component placement
+   - Apply high-fidelity designs from `high-fidelity-mockups.md` for visual styling
+   - Implement responsive design patterns based on `design-specifications.md`
+   - Ensure accessibility compliance following `accessibility-guidelines.md`
+   - Apply developer guidelines from `handoff-documentation.md` for proper implementation
 
 ### Phase 4: Application Development
 
@@ -84,11 +103,15 @@ Generate a complete frontend application based on project requirements and desig
 
 2. **Core Features Implementation**
    - Implement all functional requirements from `REQUIREMENT_SPECS_PATH`
-   - Create pages and components following the style guide from `STYLE_GUIDE_PATH`
-   - Implement navigation and routing
-   - Add form handling and validation
+   - Follow user flows and journey maps from `user-flows-journey-maps.md` in `DESIGN_SPECS_PATH`
+   - Create pages and components following wireframes from `wireframes.md`
+   - Apply visual designs from `high-fidelity-mockups.md` for pixel-perfect implementation
+   - Reference `design-specifications.md` for spacing, colors, typography, and responsive behavior
+   - Implement navigation and routing based on user flows
+   - Add form handling and validation following design specifications
    - Implement state management solutions
-   - Add error handling and loading states
+   - Add error handling and loading states as specified in design documents
+   - Ensure accessibility features from `accessibility-guidelines.md` are implemented
 
 3. **Data Layer**
    - Create mock data services matching requirements
@@ -146,8 +169,15 @@ Generate a complete frontend application based on project requirements and desig
 ### 1. Complete Working Application
 - Fully functional frontend application
 - All requirements from `REQUIREMENT_SPECS_PATH` implemented
-- UI following design specifications from `STYLE_GUIDE_PATH`
-- Responsive design for mobile and desktop
+- UI following all design documents from `DESIGN_SPECS_PATH`:
+  - User flows and navigation patterns from `user-flows-journey-maps.md`
+  - Layout structure from `wireframes.md`
+  - Visual design from `high-fidelity-mockups.md`
+  - Component specifications from `component-library.md`
+  - Design specifications from `design-specifications.md`
+  - Accessibility compliance from `accessibility-guidelines.md`
+- Style guide implementation from `STYLE_GUIDE_PATH`
+- Responsive design for mobile and desktop as specified in design documents
 - Error handling and loading states
 
 ### 2. Test Suite
@@ -183,10 +213,19 @@ Generate a complete frontend application based on project requirements and desig
 - Clear test descriptions and assertions
 
 ### Design Implementation
-- Accurate implementation of style guide specifications from `STYLE_GUIDE_PATH`
-- Responsive design for all screen sizes
-- Consistent spacing and typography as defined in the style guide
-- Proper color usage and accessibility contrast following style guide standards
+- Accurate implementation of all design documents from `DESIGN_SPECS_PATH`:
+  - User experience flows from `user-flows-journey-maps.md`
+  - Structural layout from `wireframes.md`
+  - Visual design from `high-fidelity-mockups.md`
+  - Component usage from `component-library.md`
+  - Technical specifications from `design-specifications.md`
+  - Accessibility requirements from `accessibility-guidelines.md`
+  - Developer guidelines from `handoff-documentation.md`
+- Style guide specifications from `STYLE_GUIDE_PATH`
+- Responsive design for all screen sizes as specified in design documents
+- Consistent spacing and typography as defined in design specifications
+- Proper color usage and accessibility contrast following accessibility guidelines
+- Component states and interactions as documented in component library
 
 ### Documentation Quality
 - Clear setup instructions
@@ -194,37 +233,21 @@ Generate a complete frontend application based on project requirements and desig
 - Code examples and usage patterns
 - Troubleshooting guides
 
-## Example Usage
-
-```bash
-# Input example:
-PROJECT_NAME="expense-tracker"
-REQUIREMENT_SPECS_PATH="./specifications/expense-tracker/requirements/"
-STYLE_GUIDE_PATH="./design-guidelines/design-tokens.tokens.json"
-
-# Expected output:
-expense-tracker/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── services/
-│   └── __tests__/
-├── package.json
-├── README.md
-└── ... (complete project structure)
-```
-
 ## Success Criteria
 
 1. ✅ Application implements all functional requirements
-2. ✅ UI follows style guide specifications from `STYLE_GUIDE_PATH`
-3. ✅ Test suite covers critical functionality
-4. ✅ Code follows best practices and is maintainable
-5. ✅ Documentation is comprehensive and clear
-6. ✅ Application is responsive and accessible
-7. ✅ Build and deployment process is documented
-8. ✅ Error handling and edge cases are covered
-
----
-
-*This prompt ensures the generation of a production-ready frontend application that meets all specified requirements while maintaining high code quality and comprehensive testing.*
+2. ✅ UI follows all design documents from `DESIGN_SPECS_PATH`:
+   - User flows and navigation from `user-flows-journey-maps.md`
+   - Layout structure from `wireframes.md`
+   - Visual design from `high-fidelity-mockups.md`
+   - Component specifications from `component-library.md`
+   - Design specifications from `design-specifications.md`
+   - Accessibility guidelines from `accessibility-guidelines.md`
+   - Implementation guidelines from `handoff-documentation.md`
+3. ✅ Style guide specifications from `STYLE_GUIDE_PATH` are implemented
+4. ✅ Test suite covers critical functionality
+5. ✅ Code follows best practices and is maintainable
+6. ✅ Documentation is comprehensive and clear
+7. ✅ Application is responsive and accessible as per design specifications
+8. ✅ Build and deployment process is documented
+9. ✅ Error handling and edge cases are covered
