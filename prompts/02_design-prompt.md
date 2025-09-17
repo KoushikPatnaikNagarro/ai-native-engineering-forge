@@ -14,7 +14,7 @@ from prompt_config.md
 5. **DESIGN_DOC_PATH**: Fetch value of variable DESIGN_DOC_PATH from prompt_config.md 
 6. **DESIGN_GUIDELINES**: Fetch value of variable DESIGN_GUIDELINES from prompt_config.md
 
-You will be using these values from the prompt_config.md wherever required in the application design/development journey
+You will be using these values from the prompt_config.md wherever required 
 
 ### Input 1: Requirement Document
 **Parameter Name**: `REQUIREMENTS_DOCUMENT`
@@ -104,7 +104,7 @@ You will be using these values from the prompt_config.md wherever required in th
 ## Output Deliverables
 
 **Output Location**: All design deliverables should be placed in `{DESIGN_DOC_PATH}`
-Set the respective variables for the path to these deliverables in prompt_config.md and reuse in the further application journey
+Set the respective variables for the path to these deliverables in prompt_config.md and reuse wherever required
 
 ### 1. User Flows & Journey Maps 
 - Visual diagrams mapping key user journeys and interactions based on requirements and personas.

@@ -12,7 +12,7 @@ Now set the path of the reference application in prompt_config.md variable REQUI
 Now set the path of the created specification folder in prompt_config.md variable SPECIFICATION_PATH
 4. **PROJECT_NAME**: <Concise project name based on high-level requirements>
 Now set the name of the application in prompt_config.md variable PROJECT_NAME
-You will be using these values from the prompt_config.md wherever required in the application design/development journey
+You will be using these values from the prompt_config.md wherever required
 
 ## Business Analysis Process
 
