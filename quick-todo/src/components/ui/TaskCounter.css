@@ -1,0 +1,249 @@
+/* TaskCounter Component Styles - US15 Implementation */
+
+.task-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-4) var(--spacing-6);
+  background-color: var(--color-surface-elevated);
+  border: 1px solid var(--color-surface-elevated-2);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-4);
+  text-align: center;
+  transition: all var(--transition-normal);
+  position: relative;
+  min-height: 80px;
+}
+
+/* US15 AC04: Prominent visibility with subtle hover effect */
+.task-counter:hover {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary-base);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-base);
+}
+
+/* Main counter display */
+.task-counter__main {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-1);
+}
+
+/* US15 AC01: Prominent number display for remaining tasks */
+.task-counter__number {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-interactive-default);
+  line-height: 1;
+  letter-spacing: -0.025em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Counter text styling */
+.task-counter__text {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  line-height: 1.2;
+}
+
+/* Detailed breakdown styling */
+.task-counter__breakdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-3);
+  margin-top: var(--spacing-2);
+  padding-top: var(--spacing-2);
+  border-top: 1px solid var(--color-surface-elevated-2);
+  font-size: var(--font-size-caption);
+  color: var(--color-text-disabled);
+}
+
+.task-counter__breakdown-item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-1);
+}
+
+.task-counter__breakdown-number {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+}
+
+.task-counter__breakdown-text {
+  font-weight: var(--font-weight-regular);
+}
+
+.task-counter__breakdown-separator {
+  color: var(--color-surface-elevated-2);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Empty state styling */
+.task-counter__empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+}
+
+.task-counter__empty-text {
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+/* Detailed variant */
+.task-counter--detailed {
+  min-height: 100px;
+  padding: var(--spacing-5) var(--spacing-6);
+}
+
+.task-counter--detailed .task-counter__main {
+  margin-bottom: var(--spacing-3);
+}
+
+/* State-based color variations */
+.task-counter[data-state="empty"] {
+  background-color: var(--color-surface-base);
+  border-style: dashed;
+  border-color: var(--color-surface-elevated-2);
+}
+
+.task-counter[data-state="empty"] .task-counter__number {
+  color: var(--color-text-disabled);
+}
+
+.task-counter[data-state="completed"] {
+  background-color: var(--color-success-light);
+  border-color: var(--color-success-main);
+}
+
+.task-counter[data-state="completed"] .task-counter__number {
+  color: var(--color-success-main);
+}
+
+.task-counter[data-state="completed"] .task-counter__text {
+  color: var(--color-success-main);
+}
+
+/* Responsive design */
+@media (max-width: 767px) {
+  .task-counter {
+    padding: var(--spacing-3) var(--spacing-4);
+    margin-bottom: var(--spacing-3);
+    min-height: 70px;
+  }
+  
+  .task-counter__number {
+    font-size: 2rem;
+  }
+  
+  .task-counter__text {
+    font-size: var(--font-size-button);
+  }
+  
+  .task-counter__breakdown {
+    gap: var(--spacing-2);
+    font-size: 11px;
+  }
+  
+  .task-counter--detailed {
+    min-height: 85px;
+    padding: var(--spacing-4);
+  }
+}
+
+/* Large screen optimizations */
+@media (min-width: 1024px) {
+  .task-counter {
+    padding: var(--spacing-5) var(--spacing-8);
+  }
+  
+  .task-counter__number {
+    font-size: 3rem;
+  }
+  
+  .task-counter--detailed {
+    min-height: 120px;
+    padding: var(--spacing-6) var(--spacing-8);
+  }
+}
+
+/* Animation for number changes - US15 AC02: Dynamic updates */
+@keyframes counterUpdate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+    color: var(--color-primary-dark);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.task-counter__number--updating {
+  animation: counterUpdate 0.3s ease-out;
+}
+
+/* Focus styles for accessibility */
+.task-counter:focus-within {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 206, 160, 0.1);
+  border-color: var(--color-interactive-focus);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .task-counter {
+    border-width: 2px;
+    border-style: solid;
+  }
+  
+  .task-counter__number {
+    font-weight: var(--font-weight-bold);
+    text-shadow: none;
+  }
+  
+  .task-counter__breakdown {
+    border-top-width: 2px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .task-counter {
+    transition: none;
+  }
+  
+  .task-counter:hover {
+    transform: none;
+  }
+  
+  .task-counter__number--updating {
+    animation: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .task-counter {
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-shadow: none;
+    transform: none;
+  }
+  
+  .task-counter__number {
+    color: #000;
+    text-shadow: none;
+  }
+}
