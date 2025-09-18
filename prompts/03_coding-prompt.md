@@ -11,7 +11,7 @@ Fetch the value of all variables from prompt_config.md and implement the specifi
 2. **REQUIREMENTS_DOCUMENT**: Fetch variable REQUIREMENTS_DOCUMENT from prompt_config.md
 3. **DESIGN_DOC_PATH**: Fetch variable DESIGN_DOC_PATH from prompt_config.md
 4. **TASK_BREAKDOWN**: Fetch variable TASK_BREAKDOWN from prompt_config.md
-5. **USER_STORY_ID**: S05 (This identifies the specific user story to implement)
+5. **USER_STORY_ID**: Execute all stories from S06 to S15 
 6. **EXISTING_CODEBASE_PATH**: `C:\Project\FLO\CodeStorm-ai-native-engineering-forge\specifications\todo\frontend`
 
 ### Core Implementation Focus
