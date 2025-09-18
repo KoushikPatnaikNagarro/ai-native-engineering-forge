@@ -13,7 +13,7 @@ This project reimagines the traditional software development lifecycle (SDLC) us
 ## 🚀 Project Workflow
 
 ### **Phase 1: Requirements Generation**
-**Input:** '05_todo-app-requirements.md' placed in high_level_design_folder  
+**Input:** '05_todo-app-requirements.md' placed in high_level_requirements folder  
 **Output Folder:** `specification/`
 
 Artifacts generated:
